@@ -164,3 +164,27 @@ body {
   }
 
 }
+.real-nav {
+  position: absolute;
+  top: 4.3%;
+  right: 4.5%;
+
+  display: flex;
+  gap: 28px;
+
+  z-index: 50;
+}
+
+.real-nav a {
+  position: static;
+
+  color: white;
+  text-decoration: none;
+
+  font-family: cursive;
+  font-size: 18px;
+}
+
+.real-nav a:hover {
+  text-decoration: underline;
+}
