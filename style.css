@@ -2,12 +2,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  background: #292724;
+  background: #2c2925;
 }
 
 body {
@@ -19,262 +22,471 @@ img {
   max-width: 100%;
 }
 
-.canvas {
+
+/* NAVIGATIE */
+
+.nav {
+  position: fixed;
+  z-index: 1000;
+  top: 24px;
+  right: 34px;
+
+  display: flex;
+  gap: 26px;
+
+  padding: 10px 16px;
+
+  background: rgba(38, 35, 31, 0.28);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  border-radius: 30px;
+}
+
+.nav a {
+  color: #f2eee7;
+
+  text-decoration: none;
+
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+
+  letter-spacing: 0.05em;
+
+  text-transform: lowercase;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* ALGEMENE PAGINA */
+
+.page {
   position: relative;
+
   width: min(100%, 1366px);
+
+  height: 100vh;
+  min-height: 760px;
+
   margin: 0 auto;
+
   overflow: hidden;
-  background: #625f59;
 }
 
 
-/* HERO */
+/* HOME */
 
-.hero {
-  position: relative;
-  height: 1120px;
-  overflow: hidden;
-  background: #5d5a55;
+.home {
+  background: #665f56;
 }
 
-.hero-photo {
+.home-photo {
   position: absolute;
+
   inset: 0;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
-  object-position: 50% 20%;
-  filter: grayscale(1) sepia(.16) contrast(.92);
-  transform: scale(1.04);
+
+  object-position: center 12%;
+
+  filter:
+    grayscale(1)
+    sepia(0.13)
+    contrast(0.93);
+
+  transform: scale(1.015);
 }
 
 .logo {
   position: absolute;
-  width: 185px;
-  left: 7%;
+
+  width: 195px;
+
   top: 10%;
+  left: 7%;
+
+  z-index: 3;
 }
 
 .line {
   position: absolute;
+
+  z-index: 2;
+
   pointer-events: none;
 }
 
-.line-a {
-  width: 260px;
+.home-line-1 {
+  width: 265px;
+
+  left: 0;
   top: 0;
-  left: -1%;
-  transform: rotate(7deg);
 }
 
-.line-b {
-  width: 90px;
-  top: 26%;
+.home-line-2 {
+  width: 110px;
+
   left: 1%;
+  top: 35%;
 }
 
-.line-c {
-  width: 470px;
-  left: 3%;
-  bottom: 5%;
-  transform: rotate(91deg);
+.home-line-3 {
+  width: 500px;
+
+  left: 0;
+  bottom: 4%;
+
+  transform: rotate(90deg);
+
   transform-origin: left bottom;
+}
+
+
+/* BADKAMERTEGELS */
+
+.tiled-page {
+  background: #6f6a61;
+}
+
+.tile-bg {
+  position: absolute;
+
+  inset: 0;
+
+  background-image: url("assets/asset-5.webp");
+
+  background-size: cover;
+
+  background-position: center;
+
+  filter:
+    grayscale(1)
+    sepia(0.10)
+    contrast(0.9);
+
+  transform: scale(1.05);
+}
+
+.tile-bg::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(55, 51, 46, 0.23);
 }
 
 
 /* ABOUT */
 
-.about {
-  position: relative;
-  height: 1020px;
-  overflow: hidden;
-  background: #77736b;
+.about-text {
+  position: absolute;
+
+  z-index: 2;
+
+  width: min(700px, 57%);
+
+  left: 8%;
+  top: 14%;
 }
 
-.paper {
+.about-line {
   position: absolute;
-  inset: -5%;
-  width: 110%;
-  height: 110%;
-  object-fit: cover;
-  opacity: .72;
-  filter: contrast(.92);
-}
 
-.about-copy {
-  position: absolute;
-  left: 7.5%;
-  top: 5%;
-  width: 47%;
-}
+  z-index: 2;
 
-.long-line {
-  position: absolute;
   width: 115px;
-  left: 52%;
-  top: -8%;
-  height: 87%;
+
+  right: 16%;
+  top: 7%;
+
+  height: 80%;
+
   object-fit: fill;
 }
 
-.video-card {
+
+/* LIVE */
+
+.live-video {
   position: absolute;
-  right: 8.5%;
-  top: 29%;
-  width: 33%;
-  text-decoration: none;
-  color: #f3eee4;
+
+  z-index: 4;
+
+  width: 42%;
+
+  left: 8%;
+  top: 11%;
+
+  transition: transform 0.18s ease;
 }
 
-.video-card img {
+.live-video:hover {
+  transform: scale(1.015);
+}
+
+.live-video img {
   width: 100%;
-}
-
-.video-title {
-  display: block;
-  margin: 0 0 10px 22%;
-  font-family: cursive;
-  font-size: 22px;
 }
 
 .scribble {
   position: absolute;
-  right: 8%;
-  top: 68%;
-  width: 31%;
-}
 
+  z-index: 3;
 
-/* SHOWS */
+  width: 29%;
 
-.shows {
-  position: relative;
-  height: 1120px;
-  overflow: hidden;
-  background: #68645d;
-}
-
-.paper-shows {
-  opacity: .66;
+  left: 17%;
+  top: 49%;
 }
 
 .where-title {
   position: absolute;
+
+  z-index: 3;
+
   width: 140px;
-  left: 36%;
-  top: 8%;
+
+  left: 49%;
+  top: 17%;
 }
 
 .show-list {
   position: absolute;
-  width: 45%;
-  right: 7%;
-  top: 6%;
+
   z-index: 3;
+
+  width: 43%;
+
+  right: 5%;
+  top: 25%;
 }
 
-.lower-photo {
+
+/* CONTACT */
+
+.contact {
+  background: #5d5851;
+}
+
+.contact-photo {
   position: absolute;
-  width: 79%;
-  left: -1%;
-  bottom: -2%;
-  z-index: 2;
-  filter: grayscale(1) sepia(.12) contrast(.92);
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center 38%;
+
+  filter:
+    grayscale(1)
+    sepia(0.13)
+    contrast(0.94);
+
+  transform: scale(1.02);
 }
 
+.contact::after {
+  content: "";
 
-/* FOOTER */
-
-.footer {
-  position: relative;
-  height: 510px;
-  background: #514e49;
-  overflow: hidden;
-}
-
-.footer-art {
   position: absolute;
-  width: 88%;
-  left: 6%;
-  bottom: -3%;
+
+  inset: 0;
+
+  background: rgba(33, 30, 27, 0.10);
+
+  pointer-events: none;
 }
 
-.click {
+.contact-art {
   position: absolute;
+
+  z-index: 3;
+
+  width: 72%;
+
+  left: 14%;
+  bottom: 7%;
+}
+
+
+/* CONTACT LINKS */
+
+.hotspot {
+  position: absolute;
+
   z-index: 20;
+
   display: block;
 }
 
-.contact-link {
-  left: 14%;
-  top: 25%;
-  width: 17%;
-  height: 15%;
+.email {
+  left: 18%;
+  bottom: 30%;
+
+  width: 14%;
+  height: 9%;
 }
 
-.mailing-link {
-  left: 57%;
-  top: 25%;
-  width: 30%;
-  height: 15%;
+.mailing {
+  left: 59%;
+  bottom: 30%;
+
+  width: 26%;
+  height: 9%;
 }
 
-.facebook-link {
-  left: 21%;
-  top: 56%;
-  width: 8%;
-  height: 23%;
+.facebook {
+  left: 22%;
+  bottom: 12%;
+
+  width: 6%;
+  height: 12%;
 }
 
-.instagram-link {
+.instagram {
   left: 29%;
-  top: 57%;
-  width: 8%;
-  height: 23%;
+  bottom: 12%;
+
+  width: 6%;
+  height: 12%;
 }
 
-.tiktok-link {
-  left: 38%;
-  top: 55%;
-  width: 8%;
-  height: 24%;
-}
+.tiktok {
+  left: 36%;
+  bottom: 12%;
 
-.spotify-link {
-  left: 47%;
-  top: 55%;
-  width: 8%;
-  height: 24%;
+  width: 6%;
+  height: 12%;
 }
 
 
-/* RESPONSIVE */
+/* MOBIEL */
 
-@media (max-width: 1366px) {
+@media (max-width: 700px) {
 
-  .canvas {
-    --scale: calc(100vw / 1366);
+  .nav {
+    top: 12px;
+
+    right: 50%;
+
+    transform: translateX(50%);
+
+    gap: 15px;
+
+    width: max-content;
+
+    max-width: 94vw;
+
+    padding: 9px 14px;
   }
 
-  .hero {
-    height: calc(1120 * var(--scale));
+  .nav a {
+    font-size: 13px;
   }
 
-  .about {
-    height: calc(1020 * var(--scale));
+  .page {
+    min-height: 620px;
   }
 
-  .shows {
-    height: calc(1120 * var(--scale));
+  .logo {
+    width: 120px;
+
+    left: 6%;
+    top: 9%;
   }
 
-  .footer {
-    height: calc(510 * var(--scale));
+  .about-text {
+    width: 86%;
+
+    left: 7%;
+    top: 16%;
   }
 
-  .video-title {
-    font-size: calc(22 * var(--scale));
-    margin-bottom: calc(10 * var(--scale));
+  .about-line {
+    display: none;
+  }
+
+  .live-video {
+    width: 82%;
+
+    left: 9%;
+    top: 13%;
+  }
+
+  .scribble {
+    width: 48%;
+
+    left: 27%;
+    top: 43%;
+  }
+
+  .where-title {
+    width: 90px;
+
+    left: 10%;
+    top: 56%;
+  }
+
+  .show-list {
+    width: 74%;
+
+    right: 7%;
+    top: 59%;
+  }
+
+  .contact-art {
+    width: 94%;
+
+    left: 3%;
+    bottom: 10%;
+  }
+
+  .email {
+    left: 10%;
+    bottom: 33%;
+
+    width: 25%;
+  }
+
+  .mailing {
+    left: 57%;
+    bottom: 33%;
+
+    width: 37%;
+  }
+
+  .facebook {
+    left: 19%;
+    bottom: 15%;
+
+    width: 10%;
+  }
+
+  .instagram {
+    left: 29%;
+    bottom: 15%;
+
+    width: 10%;
+  }
+
+  .tiktok {
+    left: 40%;
+    bottom: 15%;
+
+    width: 10%;
   }
 
 }
