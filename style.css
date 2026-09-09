@@ -1,21 +1,25 @@
 html,
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background: #fff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #ffffff;
 }
 
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
-main {
-  width: 100%;
+.website {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.canva-site {
-  display: block;
-  width: 100%;
-  height: auto;
+.website-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
 }
