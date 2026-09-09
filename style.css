@@ -10,52 +10,59 @@ body {
   width: 100%;
   height: 100%;
 
-  background: #000;
-}
-
-body {
   overflow: hidden;
+
+  background: #6b665f;
 }
 
 
-/* PAGINA VULT HET HELE BROWSERVENSTER */
+/* 
+   DE HELE CANVA-PAGINA + LINKS SCHALEN SAMEN
+*/
 
 .page {
-  position: relative;
+  position: absolute;
 
-  width: 100vw;
-  height: 100vh;
+  left: 50%;
+  top: 50%;
 
-  margin: 0;
+  transform: translate(-50%, -50%);
+
+  width: max(
+    100vw,
+    calc(100vh * 2160 / 1351)
+  );
+
+  aspect-ratio: 2160 / 1351;
 
   overflow: hidden;
 }
 
 
-/* CANVA AFBEELDING VULT HET HELE SCHERM */
+/* CANVA AFBEELDING */
 
 .page-image {
   position: absolute;
 
-  top: 0;
-  left: 0;
+  inset: 0;
 
   width: 100%;
   height: 100%;
-
-  object-fit: cover;
-  object-position: center center;
 
   display: block;
 }
 
 
-/* ONZICHTBARE KLIKBARE GEBIEDEN */
+/* ALLE LINKS */
 
 .page a {
   position: absolute;
+
   display: block;
-  z-index: 20;
+
+  z-index: 50;
+
+  cursor: pointer;
 }
 
 
@@ -65,85 +72,94 @@ body {
   left: 76.3%;
   top: 5.1%;
 
-  width: 6.2%;
-  height: 6%;
+  width: 6.5%;
+  height: 7%;
 }
 
 
 /* LIVE */
 
 .nav-live {
-  left: 83.1%;
+  left: 83%;
   top: 5.1%;
 
-  width: 4.8%;
-  height: 6%;
+  width: 5%;
+  height: 7%;
 }
 
 
 /* CONTACT */
 
 .nav-contact {
-  left: 88.4%;
+  left: 88.2%;
   top: 5.1%;
 
-  width: 8.2%;
-  height: 6%;
+  width: 8.5%;
+  height: 7%;
 }
 
 
-/* MORÈL LOGO → HOME */
+/* MORÈL LINKSONDER → HOME */
 
 .home-logo {
-  left: 4.5%;
-  bottom: 4.5%;
+  left: 4%;
+  bottom: 4%;
 
-  width: 9%;
-  height: 10%;
+  width: 10%;
+  height: 12%;
 }
 
 
-/* CONTACT PAGINA */
+/* CONTACT TEKST */
 
 .contact-email {
-  left: 17%;
-  top: 42%;
+  left: 16%;
+  top: 41%;
 
-  width: 11%;
-  height: 8%;
+  width: 13%;
+  height: 10%;
 }
+
+
+/* MAILING LIST */
 
 .mailing-list {
-  left: 64%;
-  top: 43%;
+  left: 63%;
+  top: 42%;
 
-  width: 23%;
-  height: 8%;
+  width: 25%;
+  height: 10%;
 }
 
 
-/* SOCIALS */
+/* FACEBOOK */
 
 .facebook {
-  left: 34%;
-  top: 61%;
+  left: 33%;
+  top: 60%;
 
-  width: 5.5%;
-  height: 10%;
+  width: 7%;
+  height: 12%;
 }
+
+
+/* INSTAGRAM */
 
 .instagram {
-  left: 39%;
-  top: 70%;
+  left: 38%;
+  top: 68%;
 
-  width: 6%;
-  height: 10%;
+  width: 7%;
+  height: 12%;
 }
 
-.tiktok {
-  left: 47%;
-  top: 63%;
 
-  width: 6%;
-  height: 11%;
+/* TIKTOK */
+
+.tiktok {
+  left: 46%;
+  top: 61%;
+
+  width: 7%;
+  height: 13%;
 }
