@@ -10,47 +10,47 @@ body {
   width: 100%;
   height: 100%;
 
-  background: #6b665f;
+  background: #000;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   overflow: hidden;
 }
 
 
-/* DE VOLLEDIGE CANVA-PAGINA */
+/* PAGINA VULT HET HELE BROWSERVENSTER */
 
 .page {
   position: relative;
 
-  width: min(100vw, calc(100vh * 2160 / 1351));
-
-  aspect-ratio: 2160 / 1351;
+  width: 100vw;
+  height: 100vh;
 
   margin: 0;
 
   overflow: hidden;
 }
 
+
+/* CANVA AFBEELDING VULT HET HELE SCHERM */
+
 .page-image {
   position: absolute;
 
-  inset: 0;
+  top: 0;
+  left: 0;
 
   width: 100%;
   height: 100%;
 
-  display: block;
+  object-fit: cover;
+  object-position: center center;
 
-  object-fit: contain;
+  display: block;
 }
 
 
-/* ALLE ONZICHTBARE LINKS */
+/* ONZICHTBARE KLIKBARE GEBIEDEN */
 
 .page a {
   position: absolute;
@@ -59,7 +59,7 @@ body {
 }
 
 
-/* NAVIGATIE RECHTSBOVEN */
+/* ABOUT */
 
 .nav-about {
   left: 76.3%;
@@ -69,6 +69,9 @@ body {
   height: 6%;
 }
 
+
+/* LIVE */
+
 .nav-live {
   left: 83.1%;
   top: 5.1%;
@@ -76,6 +79,9 @@ body {
   width: 4.8%;
   height: 6%;
 }
+
+
+/* CONTACT */
 
 .nav-contact {
   left: 88.4%;
@@ -86,7 +92,7 @@ body {
 }
 
 
-/* MORÈL LINKSONDER → HOME */
+/* MORÈL LOGO → HOME */
 
 .home-logo {
   left: 4.5%;
@@ -97,7 +103,7 @@ body {
 }
 
 
-/* CONTACT */
+/* CONTACT PAGINA */
 
 .contact-email {
   left: 17%;
@@ -140,12 +146,4 @@ body {
 
   width: 6%;
   height: 11%;
-}
-
-
-/* alleen zichtbaar als je met toetsenbord navigeert */
-
-.page a:focus-visible {
-  outline: 2px solid white;
-  outline-offset: 2px;
 }
