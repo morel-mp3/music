@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     margin: 0;
@@ -12,14 +16,81 @@ body {
 
 .website {
     width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
-.website-image {
+.site-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.site-image {
     display: block;
     width: 100%;
     height: auto;
-    margin: 0;
-    padding: 0;
+}
+
+/* Klikbare gebieden */
+.hotspot {
+    position: absolute;
+    display: block;
+    z-index: 10;
+}
+
+/* Deze posities kunnen we straks nog exact finetunen */
+.spotify {
+    left: 6%;
+    top: 4%;
+    width: 12%;
+    height: 4%;
+}
+
+.video {
+    left: 12%;
+    top: 46%;
+    width: 30%;
+    height: 8%;
+}
+
+.contact {
+    left: 9%;
+    top: 89%;
+    width: 17%;
+    height: 4%;
+}
+
+.mailing {
+    left: 39%;
+    top: 89%;
+    width: 20%;
+    height: 4%;
+}
+
+.facebook {
+    left: 70%;
+    top: 89%;
+    width: 5%;
+    height: 4%;
+}
+
+.instagram {
+    left: 77%;
+    top: 89%;
+    width: 5%;
+    height: 4%;
+}
+
+.tiktok {
+    left: 84%;
+    top: 89%;
+    width: 5%;
+    height: 4%;
+}
+
+/* Mobiel */
+@media (max-width: 700px) {
+    .site-wrapper {
+        width: 100%;
+    }
 }
