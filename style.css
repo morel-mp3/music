@@ -2,15 +2,15 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  background: #292622;
-}
-
 html,
 body {
   margin: 0;
   padding: 0;
+
+  width: 100%;
+  min-height: 100%;
+
+  background: #292622;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 }
 
 
-/* PAGINA'S */
+/* DE CANVA PAGINA */
 
 .page {
   position: relative;
@@ -30,7 +30,7 @@ body {
   line-height: 0;
 }
 
-.page > img {
+.page-image {
   display: block;
 
   width: 100%;
@@ -38,11 +38,7 @@ body {
 }
 
 
-/*
-De klikbare vlakken gebruiken percentages.
-Daardoor blijven ze op dezelfde plek staan
-wanneer de website groter of kleiner wordt.
-*/
+/* ALLE LINKS */
 
 .page a {
   position: absolute;
@@ -53,7 +49,7 @@ wanneer de website groter of kleiner wordt.
 }
 
 
-/* NAVIGATIE RECHTSBOVEN */
+/* ABOUT RECHTSBOVEN */
 
 .nav-about {
   left: 76.4%;
@@ -63,6 +59,9 @@ wanneer de website groter of kleiner wordt.
   height: 5%;
 }
 
+
+/* LIVE RECHTSBOVEN */
+
 .nav-live {
   left: 83%;
   top: 4.3%;
@@ -70,6 +69,9 @@ wanneer de website groter of kleiner wordt.
   width: 4.1%;
   height: 5%;
 }
+
+
+/* CONTACT RECHTSBOVEN */
 
 .nav-contact {
   left: 88.3%;
@@ -80,11 +82,10 @@ wanneer de website groter of kleiner wordt.
 }
 
 
-/* MORÈL LOGO LINKSONDER */
+/* KLEINE MORÈL LOGO LINKSONDER */
 
 .home-logo {
   left: 3.1%;
-
   bottom: 5%;
 
   width: 8.5%;
@@ -92,13 +93,13 @@ wanneer de website groter of kleiner wordt.
 }
 
 
-/* CONTACT */
+/* CONTACT TEKST */
 
 .contact-email {
   left: 18%;
   top: 46%;
 
-  width: 9.5%;
+  width: 10%;
   height: 7%;
 }
 
@@ -106,53 +107,51 @@ wanneer de website groter of kleiner wordt.
 /* MAILING LIST */
 
 .mailing-list {
-  left: 60.4%;
-  top: 45.8%;
+  left: 60%;
+  top: 45.5%;
 
-  width: 24%;
+  width: 25%;
   height: 7%;
 }
 
 
-/* FACEBOOK */
+/* FACEBOOK ICOON */
 
 .facebook {
-  left: 23.1%;
+  left: 23%;
   top: 64%;
 
-  width: 5.2%;
+  width: 5.5%;
   height: 9%;
 }
 
 
-/* INSTAGRAM */
+/* INSTAGRAM ICOON */
 
 .instagram {
-  left: 29.2%;
-  top: 69%;
+  left: 29%;
+  top: 68%;
 
-  width: 5.6%;
-  height: 9%;
-}
-
-
-/* TIKTOK */
-
-.tiktok {
-  left: 35.5%;
-  top: 62.5%;
-
-  width: 5.7%;
+  width: 6%;
   height: 10%;
 }
 
 
-/* TOETSENBORD TOEGANKELIJKHEID */
+/* TIKTOK ICOON */
+
+.tiktok {
+  left: 35%;
+  top: 62%;
+
+  width: 6%;
+  height: 11%;
+}
+
+
+/* ALS JE MET TAB DOOR DE WEBSITE GAAT */
 
 .page a:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.9);
-
-  outline-offset: 2px;
+  outline: 2px solid white;
 }
 
 
