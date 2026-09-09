@@ -3,69 +3,99 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="morèl — singer-songwriter, producer and performer. Music, live dates and contact.">
+  <meta name="description" content="morèl — songwriter, producer and performer.">
   <title>morèl</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <main class="canvas">
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#home">home</a>
+    <a href="#about">about</a>
+    <a href="#live">live</a>
+    <a href="#contact">contact</a>
+  </nav>
 
-    <!-- HERO -->
-    <section class="hero">
-      <img class="hero-photo" src="assets/asset-2.webp" alt="">
-      <img class="logo" src="assets/asset-7.webp" alt="morèl">
+  <main>
 
-      <img class="line line-a" src="assets/asset-6.webp" alt="">
-      <img class="line line-b" src="assets/asset-8.webp" alt="">
-      <img class="line line-c" src="assets/asset-9.webp" alt="">
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about">
-
-      <img class="paper paper-about" src="assets/asset-3.webp" alt="">
+    <!-- HOME -->
+    <section id="home" class="page home">
 
       <img
-        class="about-copy"
+        class="home-photo"
+        src="assets/asset-2.webp"
+        alt=""
+      >
+
+      <img
+        class="logo"
+        src="assets/asset-7.webp"
+        alt="morèl"
+      >
+
+      <img
+        class="line home-line-1"
+        src="assets/asset-6.webp"
+        alt=""
+      >
+
+      <img
+        class="line home-line-2"
+        src="assets/asset-8.webp"
+        alt=""
+      >
+
+      <img
+        class="line home-line-3"
+        src="assets/asset-9.webp"
+        alt=""
+      >
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="page tiled-page about">
+
+      <div class="tile-bg"></div>
+
+      <img
+        class="about-text"
         src="assets/asset-10.webp"
         alt="Who is morèl?"
       >
 
       <img
-        class="long-line"
+        class="about-line"
         src="assets/asset-12.webp"
         alt=""
       >
 
+    </section>
+
+
+    <!-- LIVE -->
+    <section id="live" class="page tiled-page live">
+
+      <div class="tile-bg"></div>
+
       <a
-        class="video-card"
+        class="live-video"
         href="https://www.youtube.com/watch?v=cksZPovuxDI"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Watch unfold my head live on YouTube"
       >
-        <span class="video-title">unfold my head live</span>
-
         <img
-          src="assets/asset-11.webp"
-          alt="morèl performing live"
+          src="assets/asset-17.webp"
+          alt="unfold my head live"
         >
       </a>
 
       <img
         class="scribble"
         src="assets/asset-14.webp"
-        alt=""
-      >
-
-    </section>
-
-    <!-- SHOWS -->
-    <section class="shows">
-
-      <img
-        class="paper paper-shows"
-        src="assets/asset-3.webp"
         alt=""
       >
 
@@ -78,42 +108,43 @@
       <img
         class="show-list"
         src="assets/asset-15.webp"
-        alt="Upcoming live dates"
-      >
-
-      <img
-        class="lower-photo"
-        src="assets/asset-4.webp"
-        alt=""
+        alt="Live dates"
       >
 
     </section>
 
-    <!-- FOOTER -->
-    <section class="footer">
+
+    <!-- CONTACT -->
+    <section id="contact" class="page contact">
 
       <img
-        class="footer-art"
+        class="contact-photo"
+        src="assets/asset-4.webp"
+        alt=""
+      >
+
+      <img
+        class="contact-art"
         src="assets/asset-13.webp"
-        alt="Contact and social media"
+        alt="Contact, mailing list and social media"
       >
 
       <a
-        class="click contact-link"
+        class="hotspot email"
         href="mailto:elinevaarzonmorel@live.nl"
         aria-label="Email morèl"
       ></a>
 
       <a
-        class="click mailing-link"
+        class="hotspot mailing"
         href="https://docs.google.com/forms/d/e/1FAIpQLSfJ-6jIdr_UfgFVSk1R5ropHOHxpCl81PEpbz-WifQzTBPfkg/viewform?usp=header"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Mailing list"
+        aria-label="Join mailing list"
       ></a>
 
       <a
-        class="click facebook-link"
+        class="hotspot facebook"
         href="https://www.facebook.com/morelwastaken/"
         target="_blank"
         rel="noopener noreferrer"
@@ -121,7 +152,7 @@
       ></a>
 
       <a
-        class="click instagram-link"
+        class="hotspot instagram"
         href="https://www.instagram.com/morel.mp3/"
         target="_blank"
         rel="noopener noreferrer"
@@ -129,19 +160,11 @@
       ></a>
 
       <a
-        class="click tiktok-link"
+        class="hotspot tiktok"
         href="https://www.tiktok.com/@morel.mp3"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="TikTok"
-      ></a>
-
-      <a
-        class="click spotify-link"
-        href="https://open.spotify.com/album/1DMOdYyyqKmSOXgGCnzivT?si=YAurKLoMSp-je8Zhze2u2A"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Spotify"
       ></a>
 
     </section>
