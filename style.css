@@ -11,6 +11,8 @@ body {
   height: 100%;
 
   overflow: hidden;
+
+  background: #1b1b19;
 }
 
 
@@ -18,35 +20,53 @@ body {
    SCHERMVULLENDE ACHTERGROND
    ======================================== */
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.background {
+  position: fixed;
 
-  background-image: url("assets/background-home.jpg");
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 0;
+
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
 
-  background-color: #1b1b19;
+.background-home {
+  background-image: url("assets/background-home.jpg");
 }
 
 
 /* ========================================
-   VOLLEDIGE CANVA-PAGINA — 1920 × 1080
+   BODY
+   ======================================== */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ========================================
+   CANVA-PAGINA — 1920 × 1080
    ======================================== */
 
 .page {
   position: relative;
 
   width: min(100vw, calc(100vh * 16 / 9));
+
   aspect-ratio: 16 / 9;
 
   flex-shrink: 0;
 
   overflow: hidden;
 
-  z-index: 1;
+  z-index: 10;
 }
 
 
@@ -82,7 +102,7 @@ body {
 
 
 /* ========================================
-   NAVIGATIE RECHTSBOVEN
+   NAVIGATIE
    ======================================== */
 
 .nav-about {
