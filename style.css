@@ -17,34 +17,12 @@ body {
 
 
 /* ========================================
-   SCHERMVULLENDE ACHTERGROND
-   ======================================== */
-
-.background {
-  position: fixed;
-
-  inset: 0;
-
-  width: 100vw;
-  height: 100vh;
-
-  z-index: 0;
-
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.background-home {
-  background-image: url("assets/background-home.jpg");
-}
-
-
-/* ========================================
    BODY
    ======================================== */
 
 body {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +30,29 @@ body {
 
 
 /* ========================================
-   CANVA-PAGINA — 1920 × 1080
+   SCHERMVULLENDE ACHTERGRONDFOTO
+   ======================================== */
+
+.screen-background {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  object-fit: cover;
+  object-position: center center;
+
+  display: block;
+
+  z-index: 0;
+}
+
+
+/* ========================================
+   CANVA-PAGINA — EXACT 16:9
    ======================================== */
 
 .page {
@@ -70,7 +70,7 @@ body {
 }
 
 
-/* CANVA-AFBEELDING */
+/* ECHTE CANVA-AFBEELDING */
 
 .page-image {
   position: absolute;
@@ -102,7 +102,7 @@ body {
 
 
 /* ========================================
-   NAVIGATIE
+   NAVIGATIE RECHTSBOVEN
    ======================================== */
 
 .nav-about {
@@ -113,6 +113,7 @@ body {
   height: 6%;
 }
 
+
 .nav-live {
   left: 84.5%;
   top: 7.2%;
@@ -120,6 +121,7 @@ body {
   width: 4.5%;
   height: 6%;
 }
+
 
 .nav-contact {
   left: 89.2%;
@@ -155,6 +157,7 @@ body {
   height: 8%;
 }
 
+
 .mailing-list {
   left: 63%;
   top: 44%;
@@ -176,6 +179,7 @@ body {
   height: 10%;
 }
 
+
 .instagram {
   left: 31%;
   top: 68%;
@@ -183,6 +187,7 @@ body {
   width: 5%;
   height: 10%;
 }
+
 
 .tiktok {
   left: 36%;
