@@ -62,7 +62,7 @@ body {
 
 
 /* ========================================
-   CANVA-PAGINA — EXACT 16:9
+   DESKTOP CANVA-PAGINA — 16:9
    ======================================== */
 
 .page {
@@ -80,7 +80,9 @@ body {
 }
 
 
-/* ECHTE CANVA-AFBEELDING */
+/* ========================================
+   PAGINAAFBEELDINGEN
+   ======================================== */
 
 .page-image {
   position: absolute;
@@ -93,6 +95,11 @@ body {
   display: block;
 
   object-fit: contain;
+}
+
+
+.mobile-image {
+  display: none;
 }
 
 
@@ -112,7 +119,7 @@ body {
 
 
 /* ========================================
-   NAVIGATIE RECHTSBOVEN
+   DESKTOP NAVIGATIE
    ======================================== */
 
 .nav-about {
@@ -143,7 +150,7 @@ body {
 
 
 /* ========================================
-   MORÈL LOGO → HOME
+   DESKTOP LOGO
    ======================================== */
 
 .home-logo {
@@ -156,7 +163,7 @@ body {
 
 
 /* ========================================
-   CONTACT PAGINA
+   DESKTOP CONTACT
    ======================================== */
 
 .contact-email {
@@ -178,7 +185,7 @@ body {
 
 
 /* ========================================
-   SOCIAL ICONS
+   DESKTOP SOCIALS
    ======================================== */
 
 .facebook {
@@ -205,6 +212,140 @@ body {
 
   width: 6%;
   height: 11%;
+}
+
+
+/* ========================================
+   MOBIELE WEBSITE
+   ======================================== */
+
+@media (max-width: 700px) {
+
+  body {
+    align-items: center;
+  }
+
+
+  /*
+     De mobiele Canva-pagina heeft verhouding 9:16.
+  */
+
+  .page {
+    width: min(100vw, calc(100vh * 9 / 16));
+
+    aspect-ratio: 9 / 16;
+  }
+
+
+  /* desktopafbeelding uit */
+
+  .desktop-image {
+    display: none;
+  }
+
+
+  /* mobiele afbeelding aan */
+
+  .mobile-image {
+    display: block;
+  }
+
+
+  /* ========================================
+     MOBIELE NAVIGATIE RECHTSBOVEN
+     ======================================== */
+
+  .nav-about {
+    left: 70%;
+    top: 3%;
+
+    width: 9%;
+    height: 5%;
+  }
+
+
+  .nav-live {
+    left: 79%;
+    top: 3%;
+
+    width: 7%;
+    height: 5%;
+  }
+
+
+  .nav-contact {
+    left: 86%;
+    top: 3%;
+
+    width: 12%;
+    height: 5%;
+  }
+
+
+  /* ========================================
+     MOBIEL MORÈL-LOGO LINKSONDER
+     ======================================== */
+
+  .home-logo {
+    left: 4%;
+    bottom: 2%;
+
+    width: 20%;
+    height: 9%;
+  }
+
+
+  /* ========================================
+     MOBIELE CONTACT-PAGINA
+     ======================================== */
+
+  .contact-email {
+    left: 13%;
+    top: 52%;
+
+    width: 20%;
+    height: 7%;
+  }
+
+
+  .mailing-list {
+    left: 49%;
+    top: 51%;
+
+    width: 38%;
+    height: 7%;
+  }
+
+
+  /* ========================================
+     MOBIELE SOCIALS
+     ======================================== */
+
+  .facebook {
+    left: 37%;
+    top: 72%;
+
+    width: 7%;
+    height: 7%;
+  }
+
+
+  .instagram {
+    left: 43%;
+    top: 74%;
+
+    width: 8%;
+    height: 7%;
+  }
+
+
+  .tiktok {
+    left: 49%;
+    top: 71%;
+
+    width: 9%;
+    height: 8%;
+  }
 }
 
 
