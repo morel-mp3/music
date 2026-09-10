@@ -13,30 +13,22 @@ body {
   overflow: hidden;
 }
 
+
+/* ========================================
+   SCHERMVULLENDE ACHTERGROND
+   ======================================== */
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background-color: #1b1b19;
-}
-
-
-/* ========================================
-   ACHTERGROND HOME
-   ======================================== */
-
-/*
-   Alleen wanneer page-1.webp op de pagina staat,
-   wordt background-home.jpg schermvullend
-   achter de Canva-pagina geplaatst.
-*/
-
-body:has(.page-image[src*="page-1.webp"]) {
   background-image: url("assets/background-home.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+
+  background-color: #1b1b19;
 }
 
 
